@@ -10,7 +10,7 @@ setuptools.setup(
     description="BengaliNLP is a natural language processing toolkit for Bengali Language",
     long_description=codecs.open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/banglawiki/bnlp",
+    url="https://github.com/banglawiki/bengalinlp",
     license="MIT",
     packages=setuptools.find_packages(),
     classifiers=[

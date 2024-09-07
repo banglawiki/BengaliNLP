@@ -1,7 +1,9 @@
 # Bengali Natural Language Processing(BengaliNLP)
 
 [![PyPI version](https://img.shields.io/pypi/v/bengalinlp)](https://pypi.org/project/bengalinlp/)
-[![Downloads](https://static.pepy.tech/badge/bengalinlp)](https://pepy.tech/project/bengalinlp)
+<a href="https://pypi.org/project/readyapi" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/readyapi.svg?color=%2334D058" alt="Supported Python versions">
+</a>
 
 BengaliNLP is a natural language processing toolkit for Bengali Language. This tool will help you to **tokenize Bengali text**, **Embedding Bengali words**, **Embedding Bengali Document**, **Bengali POS Tagging**, **Bengali Name Entity Recognition**, **Bangla Text Cleaning** for Bengali NLP purposes.
 

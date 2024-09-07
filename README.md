@@ -1,4 +1,4 @@
-#Bengali Natural Language Processing(BengaliNLP)
+# Bengali Natural Language Processing(BengaliNLP)
 
 [![PyPI version](https://img.shields.io/pypi/v/bengalinlp)](https://pypi.org/project/bengalinlp/)
 [![Downloads](https://static.pepy.tech/badge/bengalinlp)](https://pepy.tech/project/bengalinlp)

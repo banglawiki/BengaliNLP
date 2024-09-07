@@ -1,4 +1,4 @@
-bengali_stopwords = {
+bengali_stopwords = [
     "অতএব",
     "অথচ",
     "অথবা",
@@ -397,4 +397,4 @@ bengali_stopwords = {
     "হৈলে",
     "হোক",
     "হয়",
-}
+]

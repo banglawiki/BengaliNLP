@@ -3,7 +3,7 @@ import setuptools
 
 
 setuptools.setup(
-    name="bengalinlp",
+    name="bengalinlp-toolkit",
     version="1.0.0",
     author="KhulnaSoft DevOps",
     author_email="info@khulnasoft.com",

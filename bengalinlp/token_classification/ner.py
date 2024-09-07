@@ -13,6 +13,7 @@ from bengalinlp.utils.utils import load_pickle_model
 from bengalinlp.utils.utils import features
 from bengalinlp.utils.downloader import download_model
 
+
 class BengaliNER:
     def __init__(self, model_path: str = "", tokenizer: Callable = None):
         if not model_path:
@@ -27,9 +28,7 @@ class BengaliNER:
         # remove punctuation from tokens
         tokens = [x for x in tokens if x not in punctuations]
 
-        sentence_features = [
-            features(tokens, index) for index in range(len(tokens))
-        ]
+        sentence_features = [features(tokens, index) for index in range(len(tokens))]
         result = list(zip(tokens, self.model.predict([sentence_features])[0]))
 
         return result

@@ -2,6 +2,7 @@ import unittest
 import numpy as np
 from bengalinlp import BengaliFasttext
 
+
 class TestBengaliFasttext(unittest.TestCase):
     def setUp(self):
         self.fasttext = BengaliFasttext()
@@ -11,5 +12,6 @@ class TestBengaliFasttext(unittest.TestCase):
         vector = self.fasttext.generate_word_vector(word)
         self.assertEqual(vector.shape, (300,))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

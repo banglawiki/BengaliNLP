@@ -9,6 +9,7 @@ from tqdm.auto import tqdm
 
 from bengalinlp.utils.config import ModelInfo
 
+
 def _create_dirs(model_name: str) -> str:
     """Create directories for downloading models
 
@@ -22,6 +23,7 @@ def _create_dirs(model_name: str) -> str:
     os.makedirs(model_dir, exist_ok=True)
     model_path = os.path.join(model_dir, model_name)
     return model_path
+
 
 def _unzip_file(zip_file_path: str, unzip_dir: str = "") -> None:
     """Function to extract archives in .zip format
@@ -56,6 +58,7 @@ def _unzip_file(zip_file_path: str, unzip_dir: str = "") -> None:
                 os.remove(os.path.join(unzip_dir, file_name))
         raise zip_error
 
+
 def _download_file(file_url: str, file_path: str) -> str:
     """Function to download file
 
@@ -76,14 +79,17 @@ def _download_file(file_url: str, file_path: str) -> str:
         with requests.Session() as req_sess:
             req_res = req_sess.get(file_url, stream=True)
             total_length = int(req_res.headers.get("Content-Length"))
-            with tqdm.wrapattr(req_res.raw, "read", total=total_length, desc=op_desc) as raw:
-                with open(file_path , "wb") as file:
-                    shutil.copyfileobj(raw,file)
+            with tqdm.wrapattr(
+                req_res.raw, "read", total=total_length, desc=op_desc
+            ) as raw:
+                with open(file_path, "wb") as file:
+                    shutil.copyfileobj(raw, file)
         return file_path
     except Exception as network_error:
         if os.path.exists(file_path):
             os.remove(file_path)
         raise network_error
+
 
 def _download_zip_model(model_url: str, model_path: str) -> str:
     """Download and extract model archive and return extracted path.
@@ -103,6 +109,7 @@ def _download_zip_model(model_url: str, model_path: str) -> str:
     _download_file(model_url, tmp_zip_file_path)
     _unzip_file(tmp_zip_file_path, extract_dir)
     return model_path
+
 
 def download_model(name: str) -> str:
     """Download and extract model if necessary
@@ -124,9 +131,9 @@ def download_model(name: str) -> str:
         model_path = ""
     return model_path
 
+
 def download_all_models() -> None:
-    """Download and extract all available models for BengaliNLP
-    """
+    """Download and extract all available models for BengaliNLP"""
     model_keys = ModelInfo.get_all_models()
     for model_key in model_keys:
         download_model(model_key)

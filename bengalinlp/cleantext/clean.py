@@ -2,6 +2,7 @@
 This cleantext scripts functions solely depends on clean-text library.
 Most of the functions are copied from clean-text.
 """
+
 import re
 from bengalinlp.cleantext import constants
 from bengalinlp.corpus.corpus import BengaliCorpus as corpus
@@ -10,8 +11,10 @@ from ftfy import fix_text
 from unicodedata import category, normalize
 from emoji import UNICODE_EMOJI, demojize, emojize
 
+
 def fix_bad_unicode(text, normalization="NFC"):
     return fix_text(text, normalization=normalization)
+
 
 def fix_strange_quotes(text):
     """
@@ -21,17 +24,20 @@ def fix_strange_quotes(text):
     text = constants.DOUBLE_QUOTE_REGEX.sub('"', text)
     return text
 
+
 def replace_urls(text, replace_with=""):
     """
     Replace all URLs in ``text`` str with ``replace_with`` str.
     """
     return constants.URL_REGEX.sub(replace_with, text)
 
+
 def replace_emails(text, replace_with=""):
     """
     Replace all emails in ``text`` str with ``replace_with`` str.
     """
     return constants.EMAIL_REGEX.sub(replace_with, text)
+
 
 def remove_substrings(text, to_replace, replace_with=""):
     """
@@ -50,17 +56,21 @@ def remove_substrings(text, to_replace, replace_with=""):
         result = result.replace(x, replace_with)
     return result
 
+
 def remove_emoji(text):
     return remove_substrings(text, UNICODE_EMOJI["en"])
+
 
 def remove_number_or_digit(text, replace_with=""):
     return re.sub(constants.BANGLA_DIGIT_REGEX, replace_with, text)
 
+
 def remove_punctuations(text, replace_with=""):
     for punc in corpus.punctuations:
         text = text.replace(punc, replace_with)
-    
+
     return text
+
 
 class CleanText(object):
     def __init__(
@@ -78,8 +88,8 @@ class CleanText(object):
         replace_with_email="<EMAIL>",
         replace_with_number="<NUMBER>",
         replace_with_digit="<DIGIT>",
-        replace_with_punct = "<PUNC>"
-        ):
+        replace_with_punct="<PUNC>",
+    ):
         self.fix_unicode = fix_unicode
         self.unicode_norm = unicode_norm
         self.unicode_norm_form = unicode_norm_form
@@ -89,7 +99,7 @@ class CleanText(object):
         self.remove_digits = remove_digits
         self.remove_emoji = remove_emoji
         self.remove_punct = remove_punct
-        
+
         self.replace_with_url = replace_with_url
         self.replace_with_email = replace_with_email
         self.replace_with_number = replace_with_number

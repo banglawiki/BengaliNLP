@@ -1,10 +1,11 @@
 import unittest
 from bengalinlp import NLTKTokenizer
 
+
 class TestBasicTokenizer(unittest.TestCase):
     def setUp(self):
         self.nltk_tokenizer = NLTKTokenizer()
-    
+
     def test_nltk_word_tokenizer_with_sample_bangla_text(self):
         text = "আমি ভাত খাই।"
         tokens = self.nltk_tokenizer.word_tokenize(text)
@@ -65,7 +66,7 @@ class TestBasicTokenizer(unittest.TestCase):
     def test_nltk_word_tokenizer_with_dot_in_bangla_text(self):
         text = "মো. রহিম বাজারে গিয়েছেন।"
         tokens = self.nltk_tokenizer.word_tokenize(text)
-        gt_tokens = ['মো.', 'রহিম', 'বাজারে', 'গিয়েছেন', '।']
+        gt_tokens = ["মো.", "রহিম", "বাজারে", "গিয়েছেন", "।"]
         self.assertEqual(tokens, gt_tokens)
 
     def test_nltk_sentence_tokenizer(self):
@@ -73,6 +74,7 @@ class TestBasicTokenizer(unittest.TestCase):
         gt_tokens = ["আমি ভাত খাই।", "সে বাজারে যায়।", "কী বলছো এসব?"]
         sentence_tokens = self.nltk_tokenizer.sentence_tokenize(text)
         self.assertEqual(sentence_tokens, gt_tokens)
+
 
 if __name__ == "__main__":
     unittest.main()

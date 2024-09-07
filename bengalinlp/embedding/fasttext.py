@@ -9,6 +9,7 @@ try:
 except ImportError:
     print("fasttext not installed. Install it by 'pip install fasttext'")
 
+
 class BengaliFasttext:
     def __init__(self, model_path: str = ""):
         if not model_path:
@@ -47,6 +48,7 @@ class BengaliFasttext:
                 vstr += " " + str(vi)
             output_vector.write(w + vstr + "\n")
         output_vector.close()
+
 
 class FasttextTrainer:
     def train(

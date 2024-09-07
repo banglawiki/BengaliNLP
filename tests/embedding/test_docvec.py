@@ -4,6 +4,7 @@ from scipy import spatial
 from typing import Callable
 from bengalinlp import BengaliDoc2vec
 
+
 class TestDocVec(unittest.TestCase):
     def setUp(self):
         self.doc2vec = BengaliDoc2vec()
@@ -14,5 +15,5 @@ class TestDocVec(unittest.TestCase):
         self.assertEqual(vector.shape, (100,))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -2,6 +2,7 @@ import pickle
 from sklearn_crfsuite import CRF
 from nltk.tag.util import untag
 
+
 def features(sentence, index):
     """sentence: [w1, w2, ...], index: the index of the word"""
     return {
@@ -24,6 +25,7 @@ def features(sentence, index):
         "capitals_inside": sentence[index][1:].lower() != sentence[index][1:],
     }
 
+
 def transform_to_dataset(tagged_sentences):
     X, y = [], []
 
@@ -36,8 +38,9 @@ def transform_to_dataset(tagged_sentences):
 
     return X, y
 
+
 def load_pickle_model(model_path: str) -> CRF:
     with open(model_path, "rb") as pkl_model:
         model = pickle.load(pkl_model)
-        
+
     return model

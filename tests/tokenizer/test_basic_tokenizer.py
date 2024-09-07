@@ -1,10 +1,11 @@
 import unittest
 from bengalinlp import BasicTokenizer
 
+
 class TestBasicTokenizer(unittest.TestCase):
     def setUp(self):
         self.basic_tokenizer = BasicTokenizer()
-    
+
     def test_basic_tokenizer_with_sample_bangla_text(self):
         text = "আমি ভাত খাই।"
         tokens = self.basic_tokenizer(text)
@@ -65,8 +66,9 @@ class TestBasicTokenizer(unittest.TestCase):
     def test_basic_tokenizer_with_dot_in_bangla_text(self):
         text = "মো. রহিম বাজারে গিয়েছেন।"
         tokens = self.basic_tokenizer(text)
-        gt_tokens = ['মো.', 'রহিম', 'বাজারে', 'গিয়েছেন', '।']
+        gt_tokens = ["মো.", "রহিম", "বাজারে", "গিয়েছেন", "।"]
         self.assertEqual(tokens, gt_tokens)
+
 
 if __name__ == "__main__":
     unittest.main()

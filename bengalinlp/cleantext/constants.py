@@ -2,14 +2,13 @@
 Constant symbols and compiled RegExs use for cleaning.
 This part solely copied from package clean-text
 """
+
 import re
 import sys
 import unicodedata
 
 
-BANGLA_DIGIT_REGEX = re.compile(
-    r'[০-৯]+'
-)
+BANGLA_DIGIT_REGEX = re.compile(r"[০-৯]+")
 
 # taken hostname, domainname, tld from URL regex below
 EMAIL_REGEX = re.compile(

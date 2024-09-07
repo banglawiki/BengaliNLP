@@ -6,6 +6,7 @@ from scipy import spatial
 from bengalinlp.utils.downloader import download_model
 from bengalinlp.utils.config import ModelTypeEnum
 
+
 class BengaliGlove:
     def __init__(self, glove_vector_path: str = ""):
         if not glove_vector_path:

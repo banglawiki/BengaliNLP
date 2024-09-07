@@ -6,6 +6,7 @@ import sentencepiece as bsp
 from bengalinlp.utils.downloader import download_model
 from bengalinlp.utils.config import ModelTypeEnum
 
+
 class SentencepieceTokenizer:
     def __init__(self, model_path: str = ""):
         if not model_path:
@@ -25,6 +26,7 @@ class SentencepieceTokenizer:
     def id2text(self, ids: List[int]) -> str:
         text = self.model.DecodeIds(ids)
         return text
+
 
 class SentencepieceTrainer:
     def __init__(self, data, vocab_size, model_prefix):

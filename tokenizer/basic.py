@@ -4,9 +4,11 @@ Basic tokenization tokenize sentence using white spaces, punctuation mark
 Code shamelessly copied from BERT tokenization
 To check Original Code: https://github.com/google-research/bert/blob/master/tokenization.py
 """
+
 import six
 import unicodedata
 from typing import List
+
 
 def convert_to_unicode(text):
     """Converts `text` to Unicode (if it's not already), assuming utf-8 input."""
@@ -57,7 +59,8 @@ def _is_punctuation(char):
     return False
 
 
-DUMMYTOKEN = 'XTEMPDOT'
+DUMMYTOKEN = "XTEMPDOT"
+
 
 class BasicTokenizer:
     """Runs basic tokenization (punctuation splitting, lower casing, etc.)."""
@@ -69,7 +72,7 @@ class BasicTokenizer:
         """Tokenizes a piece of text."""
         text = convert_to_unicode(text)
         # handle (.) in bangla text
-        text = text.replace('.', DUMMYTOKEN)
+        text = text.replace(".", DUMMYTOKEN)
         orig_tokens = whitespace_tokenize(text)
         split_tokens = []
         for token in orig_tokens:
@@ -77,9 +80,9 @@ class BasicTokenizer:
 
         output_tokens = whitespace_tokenize(" ".join(split_tokens))
         # get (.) back in output tokens
-        output_tokens = [token.replace(DUMMYTOKEN, '.') for token in output_tokens]
+        output_tokens = [token.replace(DUMMYTOKEN, ".") for token in output_tokens]
         return output_tokens
-        
+
     def _run_split_on_punc(self, text):
         """Splits punctuation on a piece of text."""
         chars = list(text)

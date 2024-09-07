@@ -3,6 +3,7 @@ from sklearn_crfsuite import CRF
 from sklearn_crfsuite import metrics
 from bengalinlp.utils.utils import transform_to_dataset, features
 
+
 class CRFTaggerTrainer:
     def train(self, model_name, train_data, test_data, average="micro"):
 

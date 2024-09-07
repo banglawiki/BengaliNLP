@@ -1,6 +1,7 @@
 import unittest
 from bengalinlp import BengaliWord2Vec
 
+
 class TestBengaliWord2Vec(unittest.TestCase):
     def setUp(self):
         self.word2vec = BengaliWord2Vec()
@@ -15,8 +16,13 @@ class TestBengaliWord2Vec(unittest.TestCase):
         topn = 5
         similar_words = self.word2vec.get_most_similar_words(word, topn=topn)
         self.assertEqual(len(similar_words), topn)
-        self.assertTrue(all(isinstance(word, str) and isinstance(similarity, float) for word, similarity in similar_words))
+        self.assertTrue(
+            all(
+                isinstance(word, str) and isinstance(similarity, float)
+                for word, similarity in similar_words
+            )
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

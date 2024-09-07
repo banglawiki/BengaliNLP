@@ -17,6 +17,7 @@ from typing import List
 from bengalinlp.tokenizer.basic import BasicTokenizer
 from ._stopwords import bengali_stopwords
 
+
 class BengaliCorpus:
     punctuations: str = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~।ঃ"
     letters: str = "অআইঈউঊঋএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহড়ঢ়য়ৎংঃঁ"

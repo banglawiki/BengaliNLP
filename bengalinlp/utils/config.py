@@ -1,5 +1,6 @@
 """Module providing Config for model name and URL."""
 
+
 class ModelTypeEnum:
     NER = "NER"
     POS = "POS"
@@ -11,54 +12,54 @@ class ModelTypeEnum:
     WORD2VEC = "WORD2VEC"
 
 
-class ModelInfo():
-    """Class for various model name and their URLs
-    """
+class ModelInfo:
+    """Class for various model name and their URLs"""
+
     __url_dict = {
-        "NER" : {
-            "name" : "bn_ner.pkl",
-            "type" : "single",
-            "url" : "https://raw.githubusercontent.com/banglawiki/bengalinlp/master/model/bn_ner.pkl",
+        "NER": {
+            "name": "bn_ner.pkl",
+            "type": "single",
+            "url": "https://raw.githubusercontent.com/banglawiki/bengalinlp/master/model/bn_ner.pkl",
         },
-        "POS" : {
-            "name" : "bn_pos.pkl",
-            "type" : "single",
-            "url" : "https://raw.githubusercontent.com/banglawiki/bengalinlp/master/model/bn_pos.pkl",
+        "POS": {
+            "name": "bn_pos.pkl",
+            "type": "single",
+            "url": "https://raw.githubusercontent.com/banglawiki/bengalinlp/master/model/bn_pos.pkl",
         },
-        "SPM" : {
-            "name" : "bn_spm.model",
-            "type" : "single",
-            "url" : "https://raw.githubusercontent.com/banglawiki/bengalinlp/master/model/bn_spm.model",
+        "SPM": {
+            "name": "bn_spm.model",
+            "type": "single",
+            "url": "https://raw.githubusercontent.com/banglawiki/bengalinlp/master/model/bn_spm.model",
         },
-        "FASTTEXT" : {
-            "name" : "bengali_fasttext_wiki.bin",
-            "type" : "zip",
-            "url" : "https://huggingface.co/khulnasoft/bangla-fasttext/resolve/main/bengali_fasttext_wiki.zip",
+        "FASTTEXT": {
+            "name": "bengali_fasttext_wiki.bin",
+            "type": "zip",
+            "url": "https://huggingface.co/khulnasoft/bangla-fasttext/resolve/main/bengali_fasttext_wiki.zip",
         },
-        "GLOVE" : {
-            "name" : "bn_glove.39M.100d.txt",
-            "type" : "zip",
-            "url" : "https://huggingface.co/khulnasoft/bangla-glove-vectors/resolve/main/bn_glove.39M.100d.zip",
+        "GLOVE": {
+            "name": "bn_glove.39M.100d.txt",
+            "type": "zip",
+            "url": "https://huggingface.co/khulnasoft/bangla-glove-vectors/resolve/main/bn_glove.39M.100d.zip",
         },
-        "NEWS_DOC2VEC" : {
-            "name" : "bangla_news_article_doc2vec.model",
-            "type" : "zip",
-            "url" : "https://huggingface.co/khulnasoft/news_article_doc2vec/resolve/main/news_article_doc2vec.zip",
+        "NEWS_DOC2VEC": {
+            "name": "bangla_news_article_doc2vec.model",
+            "type": "zip",
+            "url": "https://huggingface.co/khulnasoft/news_article_doc2vec/resolve/main/news_article_doc2vec.zip",
         },
-        "WIKI_DOC2VEC" : {
-            "name" : "bnwiki_doc2vec.model",
-            "type" : "zip",
-            "url" : "https://huggingface.co/khulnasoft/bnwiki_doc2vec_model/resolve/main/bnwiki_doc2vec_model.zip",
+        "WIKI_DOC2VEC": {
+            "name": "bnwiki_doc2vec.model",
+            "type": "zip",
+            "url": "https://huggingface.co/khulnasoft/bnwiki_doc2vec_model/resolve/main/bnwiki_doc2vec_model.zip",
         },
-        "WORD2VEC" : {
-            "name" : "bnwiki_word2vec.model",
-            "type" : "zip",
-            "url" : "https://huggingface.co/khulnasoft/bangla_word2vec/resolve/main/bangla_word2vec_gen4.zip",
+        "WORD2VEC": {
+            "name": "bnwiki_word2vec.model",
+            "type": "zip",
+            "url": "https://huggingface.co/khulnasoft/bangla_word2vec/resolve/main/bangla_word2vec_gen4.zip",
         },
     }
 
     @staticmethod
-    def get_model_info(name:str) -> tuple:
+    def get_model_info(name: str) -> tuple:
         """Get Filename of the model
 
         Args:

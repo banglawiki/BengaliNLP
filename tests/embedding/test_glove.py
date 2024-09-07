@@ -1,6 +1,7 @@
 import unittest
 from bengalinlp import BengaliGlove
 
+
 class TestBengaliGlove(unittest.TestCase):
     def setUp(self):
         self.glove = BengaliGlove()
@@ -10,5 +11,6 @@ class TestBengaliGlove(unittest.TestCase):
         vector = self.glove.get_word_vector(word)
         self.assertEqual(vector.shape, (100,))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

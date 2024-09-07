@@ -1,4 +1,5 @@
 import warnings
+
 warnings.filterwarnings("ignore")
 
 import os
@@ -29,11 +30,7 @@ def _read_corpus(files: List[str], tokenizer=None):
 
 
 class BengaliDoc2vec:
-    def __init__(
-        self,
-        model_path: str = "",
-        tokenizer: Callable = None
-        ):
+    def __init__(self, model_path: str = "", tokenizer: Callable = None):
         if model_path == "" or model_path == ModelTypeEnum.NEWS_DOC2VEC:
             model_path = download_model(ModelTypeEnum.NEWS_DOC2VEC)
         if model_path == ModelTypeEnum.WIKI_DOC2VEC:
@@ -50,7 +47,7 @@ class BengaliDoc2vec:
         Returns:
             ndarray: generated vector
         """
-        
+
         if self.tokenizer:
             tokens = self.tokenizer(document)
         else:
@@ -85,6 +82,7 @@ class BengaliDoc2vec:
         )
 
         return similarity
+
 
 class BengaliDoc2vecTrainer:
     def __init__(self, tokenizer: Callable = None):

@@ -11,6 +11,7 @@ DUMMYTOKEN = "XTEMPTOKEN"
 
 DUMMYTOKEN = "XTEMPDOT"
 
+
 class NLTKTokenizer:
     def word_tokenize(self, text: str) -> List[str]:
         text = text.replace(".", DUMMYTOKEN)  # to deal with abbreviations

@@ -1,18 +1,20 @@
-import codecs
-import setuptools
+from setuptools import setup, find_packages
+from pathlib import Path
 
+# Read the contents of your README file
+long_description = (Path(__file__).parent / "README.md").read_text(encoding="utf-8")
 
-setuptools.setup(
-    name="bengalinlp-toolkit",
+setup(
+    name="bengalinlp",
     version="1.0.0",
     author="KhulnaSoft DevOps",
     author_email="info@khulnasoft.com",
     description="BengaliNLP is a natural language processing toolkit for Bengali Language",
-    long_description=codecs.open("README.md", encoding="utf-8").read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/banglawiki/bengalinlp",
     license="MIT",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -20,18 +22,18 @@ setuptools.setup(
     ],
     python_requires=">=3.6",
     install_requires=[
-        "sentencepiece==0.2.0",
-        "gensim==4.3.2",
+        "sentencepiece",
+        "gensim",
         "nltk",
-        "numpy",
-        "scipy==1.10.1",
-        "sklearn-crfsuite==0.3.6",
-        "tqdm==4.66.3",
-        "ftfy==6.2.0",
-        "emoji==1.7.0",
+        "numpy>=1.18.5,<2.0",
+        "scipy>=1.7.0,<1.14.0",
+        "sklearn-crfsuite",
+        "tqdm",
+        "ftfy",
+        "emoji",
         "requests",
     ],
     extras_require={
-        "fasttext": ["fasttext==0.9.2"],
+        "fasttext": ["fasttext"],
     },
 )

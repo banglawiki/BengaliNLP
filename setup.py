@@ -1,39 +1,37 @@
+import codecs
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
 
 setuptools.setup(
     name="bengalinlp",
-    version="0.1.0",
-    description="Text normalizer for Bengali and English",
-    long_description=long_description,
+    version="1.0.0",
+    author="KhulnaSoft DevOps",
+    author_email="info@khulnasoft.com",
+    description="BengaliNLP is a natural language processing toolkit for Bengali Language",
+    long_description=codecs.open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    author="Your Name",
-    author_email="infosulaiman@icloud.com",
-    url="https://github.com/banglawiki/bengalinlp",
+    url="https://github.com/banglawiki/bnlp",
+    license="MIT",
     packages=setuptools.find_packages(),
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
-        'Topic :: Text Processing :: Linguistic',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
+    python_requires=">=3.6",
     install_requires=[
-        "regex",
-        "emoji==1.4.2",
-        "ftfy==6.0.3"
+        "sentencepiece==0.2.0",
+        "gensim==4.3.2",
+        "nltk",
+        "numpy",
+        "scipy==1.10.1",
+        "sklearn-crfsuite==0.3.6",
+        "tqdm==4.66.3",
+        "ftfy==6.2.0",
+        "emoji==1.7.0",
+        "requests",
     ],
-    python_requires='>=3.5',
-    include_package_data=True,
-    project_urls={
-        'Source': 'https://github.com/banglawiki/bengalinlp',
-        'Bug Reports': 'https://github.com/banglawiki/bengalinlp/issues',
+    extras_require={
+        "fasttext": ["fasttext==0.9.2"],
     },
 )

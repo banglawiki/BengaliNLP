@@ -34,27 +34,27 @@ class ModelInfo:
         "FASTTEXT": {
             "name": "bengali_fasttext_wiki.bin",
             "type": "zip",
-            "url": "https://huggingface.co/khulnasoft/bangla-fasttext/resolve/main/bengali_fasttext_wiki.zip",
+            "url": "https://huggingface.co/sagorsarker/bangla-fasttext/resolve/main/bengali_fasttext_wiki.zip",
         },
         "GLOVE": {
             "name": "bn_glove.39M.100d.txt",
             "type": "zip",
-            "url": "https://huggingface.co/khulnasoft/bangla-glove-vectors/resolve/main/bn_glove.39M.100d.zip",
+            "url": "https://huggingface.co/sagorsarker/bangla-glove-vectors/resolve/main/bn_glove.39M.100d.zip",
         },
         "NEWS_DOC2VEC": {
             "name": "bangla_news_article_doc2vec.model",
             "type": "zip",
-            "url": "https://huggingface.co/khulnasoft/news_article_doc2vec/resolve/main/news_article_doc2vec.zip",
+            "url": "https://huggingface.co/sagorsarker/news_article_doc2vec/resolve/main/news_article_doc2vec.zip",
         },
         "WIKI_DOC2VEC": {
             "name": "bnwiki_doc2vec.model",
             "type": "zip",
-            "url": "https://huggingface.co/khulnasoft/bnwiki_doc2vec_model/resolve/main/bnwiki_doc2vec_model.zip",
+            "url": "https://huggingface.co/sagorsarker/bnwiki_doc2vec_model/resolve/main/bnwiki_doc2vec_model.zip",
         },
         "WORD2VEC": {
             "name": "bnwiki_word2vec.model",
             "type": "zip",
-            "url": "https://huggingface.co/khulnasoft/bangla_word2vec/resolve/main/bangla_word2vec_gen4.zip",
+            "url": "https://huggingface.co/sagorsarker/bangla_word2vec/resolve/main/bangla_word2vec_gen4.zip",
         },
     }
 

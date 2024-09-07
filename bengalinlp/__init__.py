@@ -1,4 +1,4 @@
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 
 import os
 from bengalinlp.tokenizer.basic import BasicTokenizer

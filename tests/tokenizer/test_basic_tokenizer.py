@@ -14,7 +14,7 @@ class TestBasicTokenizer(unittest.TestCase):
         text = """
         ভারত থেকে অনুপ্রবেশ ঠেকাতে বর্ডার গার্ড বাংলাদেশের (বিজিবি)
          সঙ্গে রাজশাহীর চরখানপুর সীমান্ত পাহারা দিচ্ছেন গ্রামবাসী।
-         সীমান্তে নজরদারি জোরদার করার জন্য     চরখানপুর গ্রামের প্রায় আড়াই শ
+         সীমান্তে নজরদারি জোরদার করার জন্য     চরখানপুর গ্রামের প্রায় আড়াই শ
          বাসিন্দা রাত জেগে পালাক্রমে এই কাজ করছেন গত ২৮ নভেম্বর থেকে।
         """
         tokens = self.basic_tokenizer(text)
@@ -44,8 +44,8 @@ class TestBasicTokenizer(unittest.TestCase):
             "জন্য",
             "চরখানপুর",
             "গ্রামের",
-            "প্রায়",
-            "আড়াই",
+            "প্রায়",
+            "আড়াই",
             "শ",
             "বাসিন্দা",
             "রাত",
@@ -63,9 +63,9 @@ class TestBasicTokenizer(unittest.TestCase):
         self.assertEqual(tokens, gt_tokens)
 
     def test_basic_tokenizer_with_dot_in_bangla_text(self):
-        text = "মো. রহিম বাজারে গিয়েছেন।"
+        text = "মো. রহিম বাজারে গিয়েছেন।"
         tokens = self.basic_tokenizer(text)
-        gt_tokens = ['মো.', 'রহিম', 'বাজারে', 'গিয়েছেন', '।']
+        gt_tokens = ['মো.', 'রহিম', 'বাজারে', 'গিয়েছেন', '।']
         self.assertEqual(tokens, gt_tokens)
 
 if __name__ == "__main__":

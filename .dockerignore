@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+.vscode
+.git
+.gitignore
+.dockerignore
+tests/
+notebooks/

@@ -1,10 +1,12 @@
 """
 mT5 Inference Example for Bengali NLP
 """
+
 from transformers import MT5ForConditionalGeneration, MT5Tokenizer
 
 # You can use 'google/mt5-small', 'google/mt5-base', etc.
 MODEL_NAME = "google/mt5-small"
+
 
 def mt5_generate(text, task_prefix="translate Bengali to English: "):
     tokenizer = MT5Tokenizer.from_pretrained(MODEL_NAME)
@@ -14,6 +16,7 @@ def mt5_generate(text, task_prefix="translate Bengali to English: "):
     output_ids = model.generate(input_ids, max_length=64, num_beams=4)
     output = tokenizer.decode(output_ids[0], skip_special_tokens=True)
     return output
+
 
 if __name__ == "__main__":
     # Example: Bengali to English translation

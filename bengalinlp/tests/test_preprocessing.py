@@ -2,6 +2,7 @@
 from bengalinlp.preprocessing.stopwords import remove_stopwords, BengaliStopwordRemover
 from bengalinlp.preprocessing.stemming import stem_bengali_text, BengaliStemmer
 
+
 class TestPreprocessing(unittest.TestCase):
     def test_stopword_removal(self):
         text = "আমি আজ স্কুলে যাবো এবং আমার বন্ধুদের সাথে দেখা করবো।"
@@ -18,6 +19,7 @@ class TestPreprocessing(unittest.TestCase):
         stemmer = BengaliStemmer()
         result2 = stemmer(text)
         self.assertIn("ছেলে", result2)
+
 
 if __name__ == "__main__":
     unittest.main()

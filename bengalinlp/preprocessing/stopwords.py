@@ -1,7 +1,9 @@
 """
 Stopword removal utility for Bengali NLP.
 """
+
 from bengalinlp.corpus._stopwords import bengali_stopwords
+
 
 def remove_stopwords(text, custom_stopwords=None):
     """
@@ -17,7 +19,8 @@ def remove_stopwords(text, custom_stopwords=None):
         stopwords.update(custom_stopwords)
     tokens = text.split()
     filtered = [word for word in tokens if word not in stopwords]
-    return ' '.join(filtered)
+    return " ".join(filtered)
+
 
 class BengaliStopwordRemover:
     def __init__(self, custom_stopwords=None):
@@ -28,4 +31,4 @@ class BengaliStopwordRemover:
     def __call__(self, text):
         tokens = text.split()
         filtered = [word for word in tokens if word not in self.stopwords]
-        return ' '.join(filtered)
+        return " ".join(filtered)

@@ -6,7 +6,7 @@ long_description = (Path(__file__).parent / "README.md").read_text(encoding="utf
 
 setup(
     name="bengalinlp",
-    version="2.0.0",
+    version="2.0.1",
     author="KhulnaSoft DevOps",
     author_email="info@khulnasoft.com",
     description="BengaliNLP is a natural language processing toolkit for Bengali Language",

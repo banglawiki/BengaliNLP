@@ -14,8 +14,8 @@ identifiers:
 repository-code: 'https://github.com/banglawiki/BengaliNLP'
 url: 'https://banglawiki.khulnasoft.com'
 abstract: >-
-  This tool will help you to tokenize Bengali text, Embedding Bengali words, 
-  Embedding Bengali Document, Bengali POS Tagging, Bengali Name Entity Recognition, 
+  This tool will help you to tokenize Bengali text, Embedding Bengali words,
+  Embedding Bengali Document, Bengali POS Tagging, Bengali Name Entity Recognition,
   Bangla Text Cleaning for Bengali NLP purposes.
 keywords:
   - BengaliNLP
